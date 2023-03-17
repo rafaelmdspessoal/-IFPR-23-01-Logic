@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 float convert_money(float amount, float ratio){
-    return amount / ratio;
+    return amount * ratio;
 }
 
 int main(){
