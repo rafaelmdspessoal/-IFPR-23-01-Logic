@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <math.h>
+#include <locale.h>
 
 float get_imc(float peso, float altura){
     float imc;
@@ -9,10 +10,12 @@ float get_imc(float peso, float altura){
 }
 
 int main(){
-    char genero;    
+    char genero;
     float peso;
     float altura;
     float imc;
+
+    setlocale(LC_ALL,"");
 
     printf("Digite seu gênero (M/F): ");
     scanf("%c", &genero);
@@ -23,6 +26,7 @@ int main(){
         return 0;
     }
 
+    fflush(stdin);
     printf("Digite seu peso (Kg): ");
     scanf("%f", &peso);
 
